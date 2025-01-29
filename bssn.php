@@ -3912,10 +3912,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['command'])) {
 <!-- Terminal Input Section -->
 <div class="terminal-input mt-5" style="display: inline-block; vertical-align: top; width: 48%;">
     <li style="margin-left: 30px;"><strong>Terminal:</strong></li>
-    <form method="post" id="terminalForm" style="margin-left: 100px;">
+    <form method="post" id="terminalForm" style="margin-left: 5px;">
         <!-- Resize the textarea with smaller size -->
-        <textarea id="terminalInput" name="command" class="form-control" rows="1" style="height: 10px; width: 100%; margin-bottom: 10px;" placeholder="Enter Command.."></textarea>
-        <button type="submit" class="btn btn-primary mt-3" style="font-size: 13px; padding: 3px 5px; margin-top: 10px;">Run Command</button>
+        <textarea id="terminalInput" name="command" class="form-control" rows="1" style="height: 3px; width: 110%; margin-bottom: 7px;" placeholder="Enter Command.."></textarea>
+        <button type="submit" class="btn btn-primary mt-3" style="font-size: 12px; padding: 3px 5px; margin-top: 10px;">Run Command</button>
     </form>
         
         <li style="margin-left: 3%;"><strong>Output:</strong></li>
