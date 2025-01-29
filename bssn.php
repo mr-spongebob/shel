@@ -3909,7 +3909,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['command'])) {
     </ul>
 </div>
 
-
+<!-- Terminal Input Section -->
 <div class="terminal-input mt-5" style="display: inline-block; vertical-align: top; width: 48%;">
     <li style="margin-left: 30px;"><strong>Terminal:</strong></li>
     <form method="post" id="terminalForm" style="margin-left: 20px;">
@@ -3922,7 +3922,25 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['command'])) {
         <strong><pre id="terminalOutput"><?php echo htmlspecialchars($output); ?></pre></strong>
     </div>
 </div>
+<style>
+    /* Media Query untuk perangkat mobile dan layar kecil */
+    @media (max-width: 768px) {
+        .server-info, .terminal-input {
+            display: block; /* Membuat elemen menjadi blok di perangkat kecil */
+            width: 100%; /* Menyesuaikan lebar ke 100% */
+            margin-bottom: 20px; /* Memberikan jarak antara elemen */
+        }
+    }
 
+    /* Tampilan untuk desktop */
+    @media (min-width: 769px) {
+        .server-info, .terminal-input {
+            display: inline-block; /* Menampilkan elemen secara sejajar */
+            width: 48%; /* Membatasi lebar masing-masing elemen menjadi 48% */
+            vertical-align: top; /* Menjaga elemen tetap sejajar pada bagian atas */
+        }
+    }
+</style>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
     $(document).ready(function() {
