@@ -3611,7 +3611,7 @@ global $lang, $root_url, $favicon_path;
     
     <meta name="author" content="BSSN @2025">
     <meta name="robots" content="noindex, nofollow">
-    <meta property="og:description" content="Badan Siber Dan Sandi Negara">
+    <meta property="og:description" content="Badan Siber Dan Sandi Negara Republik Indonesia">
     <meta name="description" content="Badan Siber Dan Sandi Negara">
     <meta property="og:image" content="https://i.ibb.co.com/c5VKZ1n/a.png">
 <link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Logo_BSSN_new.png/600px-Logo_BSSN_new.png">
