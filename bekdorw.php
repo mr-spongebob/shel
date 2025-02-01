@@ -4,7 +4,7 @@
  * Code Belum Sepenuhnya Sempurna
  * Recode tanpa author?you tolol w capek buat
  * @email kangpepes@protonmail.com
- *admin/adminsange
+ * admin/adminsange
  * @Creat By Mr.Spongebob X Adit Ganteng
  * @link https://www.sukabumiblackhat.com
  */
