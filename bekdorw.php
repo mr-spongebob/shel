@@ -3,7 +3,6 @@
  * Bekdor v1
  * Code Belum Sepenuhnya Sempurna
  * @email kangpepes@protonmail.com
- * admin/adminsange
  * @Creat By Mr.Spongebob X Adit Ganteng
  * @link https://www.sukabumiblackhat.com
  */
